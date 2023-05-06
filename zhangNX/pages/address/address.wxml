@@ -1,0 +1,24 @@
+<view class="divContent">
+  <view wx:for="{{addressList}}" wx:for-item="item" wx:for-index="index" bindtap="itemClick(item)" class="divItem">
+    <view class="upperBox">
+      <view class="divAddress">
+        <view wx:if="{{item.label === '公司'}}" class="spanCompany">{{item.label}}</view>
+        <view wx:if="{{item.label === '家'}}" class="spanHome">{{item.label}}</view>
+        <view wx:if="{{item.label === '学校'}}" class="spanSchool">{{item.label}}</view>
+        <view class="detail">{{item.detail}}</view>
+      </view>
+      <view class="divUserPhone">
+        <view>{{item.consignee}}</view>
+        <view>{{item.sex === '0' ? '女士' : '先生'}}</view>
+        <view>{{item.phone}}</view>
+      </view>
+    </view>
+      <image class="edit" src="/asset/images/edit.png" bindtap="toAddressEditPage" />
+    <view class="divSplit"></view>
+    <view class="divDefault">
+      <image wx:if="{{item.isDefault === 1}}" src="/asset/images/checked_true.png" />
+      <image wx:if="{{item.isDefault !== 1}}" src="/asset/images/checked_false.png" bindtap="setDefaultAddress" />设为默认地址
+    </view>
+  </view>
+</view>
+<button class="divBottom" bindtap="toAddressCreatePage">+ 添加收货地址</button>

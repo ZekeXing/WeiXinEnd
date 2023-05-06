@@ -1,0 +1,33 @@
+<view id="order" class="app">
+  <view class="divBody" wx:if="{{orderList.length > 0}}">
+    <scroll-view scroll-y="true" bindscrolltolower="getList">
+      <view wx:for="{{orderList}}" wx:key="index" class="divOrders">
+        <view class="timeStatus">
+          <text>{{item.orderTime}}</text>
+          <text>{{getStatus(item.status)}}</text>
+        </view>
+        <view class="dishList">
+          <view wx:for="{{item.orderDetails}}" wx:key="index" class="item">
+            <text>{{item.name}}</text>
+            <text>x{{item.number}}</text>
+          </view>
+        </view>
+        <view class="result">
+          <text>共{{item.sumNum}} 件商品,实付</text>
+          <text class="price">￥{{item.amount}}</text>
+        </view>
+        <view class="btn" wx:if="{{item.status === 4}}">
+          <view class="btnAgain" bindtap="addOrderAgain(item)">再来一单</view>
+        </view>
+      </view>
+    </scroll-view>
+
+
+  </view>
+  <view class="divNoData" wx:else>
+    <view class="divContainer">
+      <image class="noOrderImg" src="/asset/images/no_order.png" />
+      <text class="noOrder">暂无订单</text>
+    </view>
+  </view>
+</view>

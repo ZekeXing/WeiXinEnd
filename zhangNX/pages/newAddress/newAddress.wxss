@@ -1,0 +1,90 @@
+.divContent {
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.divItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+   padding: 25rpx;
+}
+
+.text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.inputUser {
+  flex: 1;
+  margin-left: 10rpx;
+  padding: 10rpx;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.spanChecked {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+  cursor: pointer;
+}
+
+.iActive {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 10rpx;
+}
+
+.text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.divSave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  background-color: #ffc200;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 4rpx;
+  cursor: pointer;
+}
+
+.divDelete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 4rpx;
+  cursor: pointer;
+}
+
+.divDelete:hover {
+  background-color: #ff4544;
+}
+
+.spanItem {
+  display: inline-block;
+  padding: 6rpx 12rpx;
+  margin-right: 10rpx;
+  font-size: 24rpx;
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4rpx;
+  cursor: pointer;
+}
+
+.spanActiveSchool {
+  background-color: #ff4544;
+  color: #fff;
+  border-color: #3830aa;
+}

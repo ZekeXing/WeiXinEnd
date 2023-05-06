@@ -1,0 +1,49 @@
+<view class="app">
+  <view class="divHead">
+    <view class="divUser">
+      <image class="imgHead" src="/asset/images/headPage.png"></image>
+      <view class="desc">
+        <view class="divName">林之迷 <image class="imgGender" src="/asset/images/women.png"></image></view>
+        <view class="divPhone">{{userPhone}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="divContent">
+    <view class="divLinks">
+      <view class="item" bindtap="toAddressPage">
+        <image class="imgLink" src="/asset/images/locations.png"></image>
+        <text class="txtLink">地址管理</text>
+        <image class="imgArrow" src="/asset/images/arrow-right.png"></image>
+      </view>
+      <view class="divSplit"></view>
+      <view class="item" bindtap="toOrderPage">
+        <image class="imgLink" src="/asset/images/orders.png"></image>
+        <text class="txtLink">历史订单</text>
+        <image class="imgArrow" src="/asset/images/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="divOrders" wx:if="{{order[0]}}">
+      <view class="title">最新订单</view>
+      <view class="timeStatus">
+        <text>{{order[0].orderTime}}</text>
+        <text>{{getStatus(order[0].status)}}</text>
+      </view>
+      <view class="dishList">
+        <view wx:for="{{order[0].orderDetails}}" wx:key="index" class="item">
+          <text>{{item.name}}</text>
+          <text>x{{item.number}}</text>
+        </view>
+      </view>
+      <view class="result">
+        <text>共{{order[0].sumNum}} 件商品,实付</text>
+        <text class="price">￥{{order[0].amount}}</text>
+      </view>
+      <view class="btn" wx:if="{{order[0].status === 4}}">
+        <view class="btnAgain" bindtap="addOrderAgain">再来一单</view>
+      </view>
+    </view>
+    <button class="quitLogin"  bindtap="toPageLogin">
+      退出登录
+    </button>
+  </view>
+</view>

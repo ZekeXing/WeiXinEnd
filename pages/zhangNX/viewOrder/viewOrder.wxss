@@ -1,0 +1,86 @@
+.app {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.divBody {
+  margin-top: 10px;
+}
+
+
+.divOrders {
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.timeStatus {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+
+.dishList {
+  margin-bottom: 20rpx;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.result {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.price {
+  color: #ff0000;
+  margin-left: 10rpx;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btnAgain {
+  background-color: #f00;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+}
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.noOrderImg {
+  width: 800rpx;
+}
+
+.noOrder {
+  font-size: 32rpx;
+  color: #999;
+  margin-top: 20rpx;
+  text-align: center;
+}

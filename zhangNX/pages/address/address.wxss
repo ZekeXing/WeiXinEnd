@@ -1,0 +1,113 @@
+
+.divContent {
+  padding: 20rpx;
+  background-color: #f5f2f9;
+  padding-bottom: 30px;
+
+}
+
+.divItem {
+  padding: 25rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25rpx;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.divAddress {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.spanHome {
+  color: #a5673f;
+  border: 1rpx solid #a5673f;
+  border-radius: 4rpx;
+  padding: 2rpx 6rpx;
+  margin-right: 5rpx;
+  
+}
+.spanCompany {
+  color: #ff976a;
+  border: 1rpx solid #ff976a;
+  border-radius: 4rpx;
+  padding: 2rpx 6rpx;
+  margin-right: 5rpx;
+  white-space: nowrap;
+
+}
+.spanSchool {
+  color: #b4c3d2;
+  border: 1rpx solid #b4c3d2;
+  border-radius: 4rpx;
+  padding: 2rpx 6rpx;
+  margin-right: 5rpx;
+  white-space: nowrap;
+  margin-bottom: 10rpx;
+
+
+}
+.detail{
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+
+}
+.upperBox{
+   float: left;
+    width: 90%;
+  margin-bottom: 20rpx;
+
+
+}
+.divUserPhone {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10rpx;
+
+}
+
+.edit {
+  position: absolute;
+  right: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+  
+}
+
+.divSplit {
+  height: 1rpx;
+  background-color: #f5f5f5;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.divDefault {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.divDefault image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.divBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+  color: #ff976a;
+  font-size: 32rpx;
+  border-top: 1rpx solid #f5f5f5;
+}

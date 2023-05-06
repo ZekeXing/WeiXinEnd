@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/wangSX/selection/selection",
+    "pages/zhangNX/my/my",
+    "pages/zhangNX/viewOrder/viewOrder",
+    "pages/logs/logs"
+  ],
+  "subPackages": [
+    {
+      "root": "zhangNX",
+      "name": "znx",
+      "pages": [
+        "pages/address/address",
+        "pages/newAddress/newAddress"
+      ]
+    },
+    {
+      "root": "shenFK",
+      "name": "sfk",
+      "pages": [
+        "pages/submit/submit",
+        "pages/landing/landing"
+      ],
+      "independent": true
+    }
+  ],
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#e93b3d",
+    "color": "#434343",
+    "backgroundColor": "",
+    "list": [
+      {
+        "pagePath": "pages/wangSX/selection/selection",
+        "text": "首页",
+        "iconPath": "asset/icon/外卖1.png",
+        "selectedIconPath": "asset/icon/外卖.png"
+      },
+      {
+        "pagePath": "pages/zhangNX/viewOrder/viewOrder",
+        "text": "订单",
+        "iconPath": "asset/icon/签单1.png",
+        "selectedIconPath": "asset/icon/签单.png"
+      },
+      {
+        "pagePath": "pages/zhangNX/my/my",
+        "text": "我的",
+        "iconPath": "asset/icon/团队1.png",
+        "selectedIconPath": "asset/icon/团队.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}
