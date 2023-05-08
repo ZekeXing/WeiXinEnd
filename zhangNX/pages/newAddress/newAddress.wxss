@@ -43,6 +43,7 @@
 }
 
 .divSave {
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,9 +54,11 @@
   font-size: 32rpx;
   border-radius: 4rpx;
   cursor: pointer;
+  margin-bottom: 30rpx;
 }
 
 .divDelete {
+  
   display: flex;
   justify-content: center;
   align-items: center;

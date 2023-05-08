@@ -1,7 +1,7 @@
 <view class="divContent">
   <view class="divItem">
     <text>联系人：</text> 
-    <input placeholder=" 请填写收货人的姓名" value="{{form.consignee}}" maxlength='10' class="inputUser"/>
+    <input placeholder=" 请填写收货人的姓名" bindinput="inPutCont" value="{{form.consignee}}" maxlength='10' class="inputUser"/>
     <view class="spanChecked" bindtap="onSexClick" data-sex="1">
       <image class="iActive" wx:if="{{form.sex === '1'}}" src="/asset/images/checked_true.png"/>
       <image class="iActive" wx:else src="/asset/images/checked_false.png"/>
@@ -15,16 +15,17 @@
   </view>
   <view class="divItem">
     <text>手机号：</text> 
-    <input placeholder=" 请填写收货人手机号码" value="{{form.phone}}" maxlength='20' />
+    <input placeholder=" 请填写收货人手机号码" bindinput="inPutPhone" value="{{form.phone}}" maxlength='20' />
   </view>
   <view class="divItem">
     <text>收货地址：</text> 
-    <input placeholder=" 请输入收货地址" value="{{form.detail}}" maxlength='140'/>
+    <input placeholder=" 请输入收货地址" bindinput="inPutDet" value="{{form.detail}}" maxlength='140'/>
   </view>
   <view class="divItem ">
     <text>标签：</text> 
     <view wx:for="{{labelList}}" wx:key="index" bindtap="onLabelClick" data-index="{{index}}" class="{{'spanItem ' + (activeIndex === index ? 'spanActiveSchool' : '')}}">{{item}}</view>
   </view>
+  
   <view class="divSave" bindtap="saveAddress">保存地址</view>
   <view class="divDelete" bindtap="deleteAddress" wx:if="{{id}}">删除地址</view>
 </view>

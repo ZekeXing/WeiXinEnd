@@ -1,0 +1,228 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f7f7f7;
+  background-image:url('https://pic.616pic.com/bg_w1180/00/05/79/FNQwcZVOVm.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+
+}
+
+.divHead {
+  height: 88rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+
+}
+
+.divHead image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.divTitle {
+  padding: 16rpx 24rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 0px;
+
+}
+.divStatic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.logo {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.divDesc {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 16rpx;
+  line-height: 36rpx;
+}
+
+.divSend {
+  display: flex;
+  margin-top: 16rpx;
+}
+
+.divSend text {
+  margin-right: 24rpx;
+}
+
+.divSend image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+
+.divBody {
+  /* flex: 1; */
+  display: flex;
+  /* flex-direction: row; */
+  /* position: relative; */
+}
+
+.divType {
+    position: fixed;
+    left: 0;
+    width: 200rpx;
+    height: 70%;
+    background-color: #fff;
+    box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    overflow: hidden;
+}
+
+.divType .active {
+  background-color: #6b6b6b;
+}
+
+.divType view {
+  padding: 30rpx 15rpx;
+  font-size: 35rpx;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+.divMenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30rpx;
+  margin-left: 200rpx;
+}
+
+.divItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.divItem image {
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.divItem .image-slot {
+  width: 220rpx;
+  height: 220rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divName {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.divDesc {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  line-height: 36rpx;
+}
+
+.divBottom {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.divBottom text {
+  font-size: 28rpx;
+  color: #ff7c00;
+}
+
+.divNum {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+.divSubtract {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #f7f7f7;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+  cursor: pointer;
+}
+
+.divAdd {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #ff7c00;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.divDishNum {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #f7f7f7;
+  border-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rpx;
+}
+
+.divTypes {
+  font-size: 24rpx;
+  color: #ff7c00;
+  margin-right: 10rpx;
+  cursor: pointer;
+}
+
+.divLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.divLayerLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.divLayerRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 180rpx;
+    background-color: rgba(0, 0, 0, 0.5);
+}

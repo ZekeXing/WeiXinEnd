@@ -49,6 +49,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/wangSX/selection/selection",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

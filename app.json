@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/wangSX/selection/selection",
+    "pages/zhangNX/selection/selection",
     "pages/zhangNX/my/my",
     "pages/zhangNX/viewOrder/viewOrder",
     "pages/logs/logs"
@@ -31,7 +31,7 @@
     "backgroundColor": "",
     "list": [
       {
-        "pagePath": "pages/wangSX/selection/selection",
+        "pagePath": "pages/zhangNX/selection/selection",
         "text": "首页",
         "iconPath": "asset/icon/外卖1.png",
         "selectedIconPath": "asset/icon/外卖.png"
@@ -52,8 +52,8 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffba03",
+    "navigationBarTitleText": "菩提阁外卖点餐",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

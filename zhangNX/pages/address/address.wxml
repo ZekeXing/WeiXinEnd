@@ -1,5 +1,6 @@
 <view class="divContent">
-  <view wx:for="{{addressList}}" wx:for-item="item" wx:for-index="index" bindtap="itemClick(item)" class="divItem">
+  <!-- <view wx:for="{{addressList}}" wx:for-item="item" wx:for-index="index" bindtap="itemClick(item)" class="divItem"> -->
+  <view wx:for="{{addressList}}" wx:for-item="item" wx:for-index="index"  class="divItem">
     <view class="upperBox">
       <view class="divAddress">
         <view wx:if="{{item.label === '公司'}}" class="spanCompany">{{item.label}}</view>
@@ -13,7 +14,7 @@
         <view>{{item.phone}}</view>
       </view>
     </view>
-      <image class="edit" src="/asset/images/edit.png" bindtap="toAddressEditPage" />
+      <image class="edit" data-id="{{index}}" src="/asset/images/edit.png" bindtap="toAddressEditPage" />
     <view class="divSplit"></view>
     <view class="divDefault">
       <image wx:if="{{item.isDefault === 1}}" src="/asset/images/checked_true.png" />
