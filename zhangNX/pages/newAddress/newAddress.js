@@ -70,7 +70,7 @@ Page({
         // console.log( 0 == "");
         if (element === undefined || element === "") {
           console.log("空缺位置：");
-          console.log(key); 
+          console.log(key);
           return false
         }
       }
@@ -102,7 +102,7 @@ Page({
         addressList: data.data
       })
     })
-    if (Object.keys(options).length!==0) {
+    if (Object.keys(options).length !== 0) {
       // console.log(this.findLabel(this.data.form.label));
       // console.log(this.data.form.label);
       this.setData({
@@ -134,8 +134,22 @@ Page({
       ['form.sex']: event.currentTarget.dataset.sex
     })
   },
-  deleteAddress(){
-    
+  deleteAddress() {
+    let deleData = this.data.addressList
+    let id = this.data.id
+    wx.showModal({
+      title: '删除地址',
+      content: '确认要删除该项吗？',
+      success: function (res) {
+        if (res.confirm) {
+          // console.log('点击确认操作')
+         deleData.splice(id,1)
+          wx.navigateBack()
+        } else {
+          // console.log('点击取消操作')
+        }
+      }
+    })
   },
 
   /**

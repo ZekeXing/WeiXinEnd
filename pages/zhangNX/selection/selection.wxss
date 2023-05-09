@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px;
-
+  
 }
 
 .divHead {
@@ -69,17 +69,16 @@
 }
 
 .divBody {
-  /* flex: 1; */
   display: flex;
-  /* flex-direction: row; */
-  /* position: relative; */
+  /* height: 66%;
+   */
 }
 
 .divType {
     position: fixed;
     left: 0;
     width: 200rpx;
-    height: 70%;
+    height: 73%;
     background-color: #fff;
     box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -87,7 +86,7 @@
 }
 
 .divType .active {
-  background-color: #6b6b6b;
+  background-color: #9b9999;
 }
 
 .divType view {
@@ -99,130 +98,70 @@
 }
 
 .divMenu {
+  height: 73%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 30rpx;
   margin-left: 200rpx;
 }
-
 .divItem {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 20rpx;
+  margin-bottom: 10px;
 }
 
-.divItem image {
-  width: 220rpx;
-  height: 220rpx;
-  margin-right: 20rpx;
-  border-radius: 10rpx;
-  overflow: hidden;
-}
-
-.divItem .image-slot {
-  width: 220rpx;
-  height: 220rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.divImg {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  size: cover;
 }
 
 .divName {
-  font-size: 32rpx;
-  color: #333;
-  margin-bottom: 10rpx;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .divDesc {
-  font-size: 28rpx;
+  font-size: 14px;
   color: #666;
-  margin-bottom: 10rpx;
-  line-height: 36rpx;
+  margin-bottom: 5px;
 }
 
 .divBottom {
-  display: flex;
-  align-items: center;
-  margin-top: 10rpx;
-}
-
-.divBottom text {
-  font-size: 28rpx;
-  color: #ff7c00;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f00;
 }
 
 .divNum {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  position: absolute;
-  bottom: 20rpx;
-  right: 20rpx;
+  margin-left: auto;
 }
 
-.divSubtract {
-  width: 60rpx;
-  height: 60rpx;
-  background-color: #f7f7f7;
-  border-radius: 30rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10rpx;
-  cursor: pointer;
-}
-
-.divAdd {
-  width: 60rpx;
-  height: 60rpx;
-  background-color: #ff7c00;
-  border-radius: 30rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+.divSubtract image {
+  width: 20px;
+  height: 20px;
 }
 
 .divDishNum {
-  width: 60rpx;
-  height: 60rpx;
-  background-color: #f7f7f7;
-  border-radius: 30rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10rpx;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
 .divTypes {
-  font-size: 24rpx;
-  color: #ff7c00;
-  margin-right: 10rpx;
-  cursor: pointer;
+  font-size: 14px;
+  color: #f00;
+  margin-left: 10px;
 }
 
-.divLayer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.divLayerLeft {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 180rpx;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.divLayerRight {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 180rpx;
-    background-color: rgba(0, 0, 0, 0.5);
+.divAdd image {
+  width: 20px;
+  height: 20px;
 }

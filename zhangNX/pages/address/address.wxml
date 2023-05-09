@@ -18,7 +18,7 @@
     <view class="divSplit"></view>
     <view class="divDefault">
       <image wx:if="{{item.isDefault === 1}}" src="/asset/images/checked_true.png" />
-      <image wx:if="{{item.isDefault !== 1}}" src="/asset/images/checked_false.png" bindtap="setDefaultAddress" />设为默认地址
+      <image wx:if="{{item.isDefault !== 1}}" src="/asset/images/checked_false.png" bindtap="setDefaultAddress" data-id="{{index}}" />设为默认地址
     </view>
   </view>
 </view>

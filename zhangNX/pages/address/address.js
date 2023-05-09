@@ -131,6 +131,21 @@ Page({
     })
   }
   ,
+  setDefaultAddress(event){
+   let addressList = this.data.addressList
+   let id = event.currentTarget.dataset.id
+    console.log(id);
+      for (let i = 0; i < addressList.length; i++) {
+        if (i === id) {
+          addressList[i].isDefault = 1;
+        } else {
+          addressList[i].isDefault = 0;
+        }
+      }this.setData({
+        addressList: this.data.addressList
+      })
+
+      },
   onShow(){
     this.setData({
       addressList:this.data.addressList

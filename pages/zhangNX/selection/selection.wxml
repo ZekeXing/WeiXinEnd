@@ -24,45 +24,44 @@
       简介: 菩提阁中餐厅是菩提阁点餐的独立的品牌，定位“大众 化的美食外送餐饮”，旨为顾客打造专业美食。
     </view>
   </view>
- 
-</view> 
+
+</view>
 <view class="divBody">
-    <scroll-view class="divType" scroll-y>
+  <scroll-view class="divType" scroll-y>
       <block wx:for="{{categoryList}}" wx:key="index">
-        <view class="{{activeType === index ? 'active' : ''}}" bindtap="categoryClick(index,item.id,item.type)" wx:key="index">{{item.name}}</view>
+        <view class="{{activeType === index ? 'active' : ''}}" data-id="{{index}}" bindtap="categoryClick" wx:key="index">{{item.name}}</view>
       </block>
     </scroll-view>
-    <view class="divMenu">
-      <view>
-        <block wx:for="{{dishList}}" wx:key="index">
-          <view class="divItem" bindtap="dishDetails(item)" wx:key="index">
-            <image src="{{imgPathConvert(item.image)}}">
-              <view slot="error" class="image-slot">
-                <image src="/asset/images/noImg.png" />
+  
+  <scroll-view class="divMenu" scroll-y>
+      <block wx:for="{{showDishList}}" wx:key="index">
+        <view class="divItem" bindtap="dishDetails" >
+          <image class="divImg" binderror="ImgError" src="{{item.img}}">
+            <view slot="error" class="image-slot">
+              <image src="/asset/images/noImg.png" />
+            </view>
+          </image>
+          <view>
+            <view class="divName">{{item.cateName}}</view>
+            <view class="divRemark">{{item.remarks}}</view>
+            <view class="divDesc">{{'月销' + (item.saleNum ? item.saleNum : 0) }}</view>
+            <view class="divBottom"><text>￥</text><text>{{item.price/100}}</text></view>
+            <view class="divNum">
+              <view class="divSubtract" wx:if="{{item.number > 0}}" bindtap="subtractCart">
+                <image src="/asset/images/subtract.png" />
               </view>
-            </image>
-            <view>
-              <view class="divName">{{item.name}}</view>
-              <view class="divDesc">{{item.description}}</view>
-              <view class="divDesc">{{'月销' + (item.saleNum ? item.saleNum : 0) }}</view>
-              <view class="divBottom"><text>￥</text><text>{{item.price/100}}</text></view>
-              <view class="divNum">
-                <view class="divSubtract" wx:if="{{item.number > 0}}" bindtap="subtractCart(item)">
-                  <image src="/asset/images/subtract.png" />
-                </view>
-                <view class="divDishNum">{{item.number}}</view>
-                <view class="divTypes" wx:if="{{item.flavors && item.flavors.length > 0 && !item.number }}" bindtap="chooseFlavorClick(item)">选择规格</view>
-                <view class="divAdd" wx:else>
-                  <image src="/asset/images/add.png" bindtap="addCart(item)" />
-                </view>
+              <view class="divDishNum">{{item.number}}</view>
+              <view class="divTypes" wx:if="{{item.flavors && item.flavors.length > 0 && !item.number }}" bindtap="chooseFlavorClick(item)">选择规格</view>
+              <view class="divAdd" wx:else>
+                <image src="/asset/images/add.png" bindtap="addCart" />
               </view>
             </view>
           </view>
-        </block>
-      </view>
-    </view>
-  </view> 
-  <!-- </view>
+        </view>
+      </block>
+  </scroll-view>
+</view>
+<!-- </view>
   <view class="divLayer">
     <view class="divLayerLeft"></view>
     <view class="divLayerRight"></view>
