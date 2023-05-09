@@ -56,6 +56,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "shenFK/pages/submit/submit",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

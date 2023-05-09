@@ -44,6 +44,11 @@ Page({
       url: '/pages/zhangNX/viewOrder/viewOrder',
     })
   },
+  toPageLogin(){
+        wx.redirectTo({
+            url: '/shenFK/pages/landing/landing',
+          })
+      },
   /**
    * 生命周期函数--监听页面加载
    */

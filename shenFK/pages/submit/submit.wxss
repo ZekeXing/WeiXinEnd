@@ -1,1 +1,124 @@
 /* shenFK/pages/submit/submit.wxss */
+
+.divContent {
+    padding: 20rpx;
+    background-color: #f5f2f9;
+    padding-bottom: 30px;
+  
+  }
+.header{
+    height: 200rpx;
+    padding:40rpx 30rpx;
+    display: flex;
+    flex-direction: column;
+    background-color:#302e31;
+    color:white;
+  }
+  .title{
+    font-size: 66rpx;
+    font-weight: 700;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .title1{
+    font-size: 40rpx;
+    font-weight: 700;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .info{
+  font-size:28rpx ;
+  padding: 20rpx;
+  text-align: center;
+  }
+  .ul .li {
+    background: #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rpx;
+    border-radius: 10rpx;
+    height: 60rpx;
+  }
+  .divOrders {
+    background-color: whitesmoke;
+    border-radius: 15rpx;
+    overflow: hidden;
+    margin-bottom: 10rpx;
+    padding: 20rpx;
+  }
+  .detail{
+      font-size: 50rpx;
+      color: black;
+  }
+  .divItem {
+    background-color: #cecdcd;
+    display: flex;
+    align-items: center;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+     padding: 30rpx;
+     font-size: 40rpx;
+  }
+  /* .total_price_wrap{
+    flex: 4;
+    text-align: right;
+  }
+  .total_price_text{
+    color: red;
+  }
+  .footer_tool{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    height: 90rpx;
+  }
+  .all_chk_wrap{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+  }
+  .all_chk_wrap{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+   */
+.createorder{
+    border-radius: 50rpx;
+    background-color: #ffd905;
+    font-size: 40rpx;
+    width: 30%;
+    height: 100rpx;
+    left: 230rpx;
+    bottom: 75rpx;
+}
+.ground{  
+    height: 120rpx;
+    background-color: #302e31;
+    border-radius: 70rpx;
+    padding: 10rpx;
+    bottom: 0;
+}
+.imgLink{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    margin-top: 40rpx;
+}
+.font{
+    font-size: 40rpx;
+    color: white;
+}
+.kongbai{
+    height: 200rpx;
+    padding:40rpx 30rpx;
+    display: flex;
+    flex-direction: column;
+    background-color:whitesmoke;
+    color:white;
+}

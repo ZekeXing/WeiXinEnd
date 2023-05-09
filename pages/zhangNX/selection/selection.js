@@ -307,46 +307,8 @@ Page({
         saleNum: 5,
         number: 0
       },
-      {
-        id: 24,
-        cateName: '	test001	',
-        cateId: 1,
-        price: 2600,
-        img: "/asset/dishImages/	e102ece4-ceb3-4ad1-af1f-7e71f227ed42.jpg	",
-        remarks: '	测试方法。。。哈哈	',
-        saleNum: 5,
-        number: 0
-      },
-      {
-        id: 25,
-        cateName: '	佛跳墙	',
-        cateId: 3,
-        price: 7800,
-        img: "/asset/dishImages/	72beec48-6fc7-4200-8213-4d4139b43942.jpg	",
-        remarks: '	佛跳墙，就是好吃！	',
-        saleNum: 5,
-        number: 0
-      },
-      {
-        id: 26,
-        cateName: '	user001	',
-        cateId: 1,
-        price: 2300,
-        img: "/asset/dishImages/	535e7865-9f2b-43a9-9baa-486f0658d961.jpg	",
-        remarks: '	dish test!	',
-        saleNum: 5,
-        number: 0
-      },
-      {
-        id: 27,
-        cateName: '	鸡蛋	',
-        cateId: 3,
-        price: 1000,
-        img: "/asset/dishImages/	99eb491b-3c7b-4fd6-800f-ea72f8b6fd32.jpg	",
-        remarks: '	好	',
-        saleNum: 5,
-        number: 0
-      },
+
+
 
     ],
     showDishList: [],
@@ -411,10 +373,64 @@ Page({
       showDishList: this.data.showDishList
     })
   },
-  ImgError() {
-    console.log(123);
+  ImgError(event) {
+    let id = event.currentTarget.dataset.id
+    let dish = this.data.dishList[id]
+    // console.log(id);
+    dish.img = "/asset/images/noImg.png"
+    // console.log(dish.img)
+    this.setData({
+      showDishList: this.data.showDishList
+    })
   },
+  toUserPage() {
+    wx.switchTab({
+      url: '/pages/zhangNX/my/my',
+    })
+  },
+  dishDetails() {
 
+  },
+  addCart(event) {
+    let id = event.currentTarget.dataset.dish.id
+    let dish = this.data.dishList[id-1]
+    dish.number+=1
+    console.log(dish);
+    // dish.number = dish.number +1
+    //  let cartData = this.data.cartData
+    //  cartData.push(dish)
+    // let dish = this.data.dishList[id]
+    // console.log(event);
+    // console.log(id);
+    // console.log(dish.number);
+    // console.log(dish.number);
+
+    this.setData({
+      
+      cartData: this.data.dishList,
+      showDishList: this.data.showDishList
+    })
+
+  },
+  subtractCart(event){
+    let id = event.currentTarget.dataset.dish.id
+    let dish = this.data.dishList[id-1]
+    dish.number-=1
+    // console.log(dish);
+    this.setData({
+      cartData: this.data.dishList,
+      showDishList: this.data.showDishList
+    })
+  },
+  submit(){
+   let cartList =  this.data.cartData
+  //  console.log(cartList);
+    wx.setStorageSync('cartData',cartList)
+    wx.navigateTo({
+      url: '/shenFK/pages/submit/submit',
+    })
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,1 +1,80 @@
-/* shenFK/pages/landing/landing.wxss */
+/* pages/login/login.wxss */
+.header{
+    height: 200rpx;
+    padding:40rpx 30rpx;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffba03;
+    color:black;
+  }
+  .title{
+    font-size: 66rpx;
+    font-weight: 700;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .info{
+  font-size:28rpx ;
+  padding: 20rpx;
+  text-align: center;
+  }
+  .body{
+    padding: 40rpx;
+  }
+  .input{
+    margin-top: 20rpx;
+  
+  }
+  .one{
+  height: 100rpx;
+    margin-top: 20rpx;
+    box-shadow: #777777 0 0 10rpx;
+    border-radius: 40rpx;
+  }
+  .first{
+    height: 100rpx;
+      margin-top: 20rpx;
+      box-shadow: #777777 0 0 5rpx;
+      border-radius: 10rpx;
+    }
+  .two{
+    border: solid 1rpx #ffba03;
+    margin-top: 40rpx;
+    width: 60%;
+    background-color: #777777;
+    border-radius: 40rpx;
+  }
+  .end{
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+   color: black;
+  }
+  .end text{
+    margin-left:30rpx;
+  }
+  .end-power{
+    display: flex;
+   justify-content: center;
+  }
+  .power{
+  color: black;
+  position: fixed;
+  bottom: 50rpx;
+  
+  }
+  .remenber{
+    margin-top: 30rpx;
+  }
+  .imgLink {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+    margin-top: 30rpx;
+  }
+  .txtLink {
+    font-size: 40rpx;
+    color: #333;
+    flex: 1;
+  }
+  

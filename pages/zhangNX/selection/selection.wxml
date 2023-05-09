@@ -1,3 +1,4 @@
+<view>
 <view id="main" class="app">
   <view class="divHead">
     <image src="/asset/images/user.png" bindtap="toUserPage" />
@@ -36,7 +37,7 @@
   <scroll-view class="divMenu" scroll-y>
       <block wx:for="{{showDishList}}" wx:key="index">
         <view class="divItem" bindtap="dishDetails" >
-          <image class="divImg" binderror="ImgError" src="{{item.img}}">
+          <image class="divImg" data-id="{{index}}" binderror="ImgError" src="{{item.img}}">
             <view slot="error" class="image-slot">
               <image src="/asset/images/noImg.png" />
             </view>
@@ -47,27 +48,19 @@
             <view class="divDesc">{{'月销' + (item.saleNum ? item.saleNum : 0) }}</view>
             <view class="divBottom"><text>￥</text><text>{{item.price/100}}</text></view>
             <view class="divNum">
-              <view class="divSubtract" wx:if="{{item.number > 0}}" bindtap="subtractCart">
+              <view class="divSubtract" wx:if="{{item.number > 0}}" data-dish="{{item}}" bindtap="subtractCart">
                 <image src="/asset/images/subtract.png" />
               </view>
               <view class="divDishNum">{{item.number}}</view>
               <view class="divTypes" wx:if="{{item.flavors && item.flavors.length > 0 && !item.number }}" bindtap="chooseFlavorClick(item)">选择规格</view>
               <view class="divAdd" wx:else>
-                <image src="/asset/images/add.png" bindtap="addCart" />
+                <image src="/asset/images/add.png" bindtap="addCart" data-dish="{{item}}"/>
               </view>
             </view>
           </view>
         </view>
       </block>
+      <button bindtap="submit">提交订单</button>
   </scroll-view>
 </view>
-<!-- </view>
-  <view class="divLayer">
-    <view class="divLayerLeft"></view>
-    <view class="divLayerRight"></view>
-  </view>-->
-<!-- <view class="divCart" wx:if="{{categoryList.length > 0}}">
-      <view class="{{cartData && cartData.length > 0 ? 'imgCartActive' : 'imgCart'}}" bindtap="openCart"></view>
-      <view class="{{goodsNum ? 'divGoodsNum' : ''}} {{cartData && cartData.length > 99 ? 'moreGoods' : ''}}" wx:if="{{cartData && cartData.length > 0}}">{{ goodsNum }}</view>
-      <view class="divNum">
-          <text>￥</text> -->
+</view>
